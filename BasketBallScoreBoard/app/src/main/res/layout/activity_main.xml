@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sharvari.basketballscoreboard.MainActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/baskerball"
+        android:scaleType="centerCrop"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:text="Basket Ball Score Keeper"
+        android:textColor="#FBC02D"
+        android:layout_margin="8dp"
+        android:id="@+id/textView" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linlay1"
+        android:layout_below="@+id/textView">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Timer"
+            android:textSize="24sp"
+            android:textColor="#FBC02D"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="50dp"/>
+
+        <TextView
+            android:id="@+id/timerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="24dp"
+            android:layout_below="@+id/timerTitle"
+            android:layout_margin="4dp"
+            android:layout_gravity="center"
+            android:textColor="#FBC02D"
+            android:layout_marginRight="16dp"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/timerbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timer Start "
+            android:backgroundTint="#FBC02D"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:layout_below="@+id/timerView"
+            android:onClick="Timer"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linlay1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Team A"
+                    android:textColor="#FBC02D"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/ScoreView1"
+                    android:layout_gravity="center"
+                    android:textColor="#FBC02D"
+                    android:textSize="32sp"/>
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+3"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#FBC02D"
+                    android:layout_gravity="center"
+                    android:onClick="ThreePoints1"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+1"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#FBC02D"
+                    android:layout_gravity="center"
+                    android:onClick="OnePoint1" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "-1"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#FBC02D"
+                    android:layout_gravity="center"
+                    android:onClick="decrement1"/>
+
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "End Game"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#8D6E63"
+                    android:layout_gravity="center"
+                    android:onClick="EndGame"/>
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Team B"
+                        android:textColor="#FBC02D"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/ScoreView2"
+                        android:layout_gravity="center"
+                        android:textColor="#FBC02D"
+                        android:textSize="32sp"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+3"
+                        android:layout_margin="4dp"
+                        android:backgroundTint="#FBC02D"
+                        android:layout_gravity="center"
+                        android:onClick="ThreePoints2"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+1"
+                        android:layout_margin="4dp"
+                        android:backgroundTint="#FBC02D"
+                        android:layout_gravity="center"
+                        android:onClick="OnePoint2" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text = "-1"
+                        android:layout_margin="4dp"
+                        android:backgroundTint="#FBC02D"
+                        android:layout_gravity="center"
+                        android:onClick="decrement2"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text = "Restart Game"
+                        android:layout_margin="8dp"
+                        android:backgroundTint="#8D6E63"
+                        android:layout_gravity="center"
+                        android:onClick="Restart"
+                        android:id="@+id/button4" />
+
+
+                </LinearLayout>
+
+        </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/resultString"
+        android:textSize="24sp"
+        android:textColor="#FBC02D"/>
+</RelativeLayout>
+
+
+
+
+
+
